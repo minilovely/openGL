@@ -35,6 +35,7 @@ public:
 				layout(location = 0) in int sth_index;
 				out VS_OUT
 				{
+				//flat是禁用插值
 					flat int sth;
 					vec2 texcoord;
 				} vs_out;
