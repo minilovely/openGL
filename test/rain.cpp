@@ -22,11 +22,11 @@ static inline float random_float()
 class rain: public sb7::application
 {
 public:
-	GLint compile_shader()
+	GLuint compile_shader()
 	{
-		GLint vertex_shader;
-		GLint fragment_shader;
-		GLint program;
+		GLuint vertex_shader;
+		GLuint fragment_shader;
+		GLuint program;
 
 		static const GLchar* vertex_source[] =
 		{

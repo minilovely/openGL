@@ -4,6 +4,7 @@
 #include<sb7color.h>
 #include<sb7ktx.h>
 
+
 class update : public sb7::application
 {
 public:
@@ -95,14 +96,12 @@ public:
 
 
 		const GLfloat green[] = { 0.0f,0.0f,0.0f,1.0f };
-		glClearBufferfv(GL_COLOR, 0, sb7::color::Green);
-		//glClearBufferfv(GL_COLOR, 0, green);
 
 		glUseProgram(render_Program);
 
 		glUniformMatrix4fv(glGetUniformLocation(render_Program, "mv_matrix"), 1, GL_FALSE, mv_matrix);
 		glUniformMatrix4fv(glGetUniformLocation(render_Program, "proj_matrix"), 1, GL_FALSE, proj_matrix);
-		
+
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 	}
 	//编译·链接着色器
