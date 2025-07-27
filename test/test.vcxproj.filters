@@ -33,5 +33,19 @@
     <ClCompile Include="square_instance.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="asteroid.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dispmap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="myOpenGLErrorCheck.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myOpenGLErrorCheck.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

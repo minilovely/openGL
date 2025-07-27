@@ -2,6 +2,7 @@
 #include<vmath.h>
 #include<sb7ktx.h>
 #include<random>
+#include"myOpenGLErrorCheck.h"
 
 static unsigned int seed = 0x13371337;
 
@@ -22,7 +23,7 @@ static inline float random_float()
 class rain: public sb7::application
 {
 public:
-	GLuint compile_shader()
+	GLuint compile_program()
 	{
 		GLuint vertex_shader;
 		GLuint fragment_shader;
@@ -116,7 +117,7 @@ public:
 
 	void startup()
 	{
-		program = compile_shader();
+		program = compile_program();
 		GLint success;
 		glGetProgramiv(program, GL_LINK_STATUS, &success);
 		if (!success)
