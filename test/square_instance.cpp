@@ -11,37 +11,39 @@
 class Square_instance : public sb7::application
 {
 public:
-	std::string ver = R"(			#version 410 core
+	std::string ver = R"(			
+		#version 410 core
 			
 		layout(location = 0) in vec4 position;
-	layout(location = 1) in vec4 instance_color;
-	layout(location = 2) in vec4 instance_position;
+		layout(location = 1) in vec4 instance_color;
+		layout(location = 2) in vec4 instance_position;
 
-	out v2f
-	{
-		vec4 color;
-	}vs_out;
+		out v2f
+		{
+			vec4 color;
+		}vs_out;
 
-	void main()
-	{
-		gl_Position = (position + instance_position) * vec4(0.25, 0.25, 1.0, 1.0);
-		vs_out.color = instance_color;
-	};
+		void main()
+		{
+			gl_Position = (position + instance_position) * vec4(0.25, 0.25, 1.0, 1.0);
+			vs_out.color = instance_color;
+		};
 	)";
-	std::string frg = R"(			#version 410 core
-			precision highp float;
-			in v2f
-			{
-				vec4 color;
-			}vs_out;
+	std::string frg = R"(			
+		#version 410 core
+		precision highp float;
+		in v2f
+		{
+			vec4 color;
+		}vs_out;
+		
+		out vec4 color;
 			
-			out vec4 color;
-			
-			void main()
-			{
-				color = vs_out.color;
-			}
-)";
+		void main()
+		{
+			color = vs_out.color;
+		}
+	)";
 	void init()
 	{
 		static const char title[] = { "square_instance" };

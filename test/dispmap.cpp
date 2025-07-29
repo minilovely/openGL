@@ -1,4 +1,6 @@
 ﻿#include<sb7.h>
+#include<string>
+#include<vmath.h>
 #include"myOpenGLErrorCheck.h"
 
 
@@ -27,8 +29,26 @@ DECLARE_MAIN(Dispmap);
 
 void Dispmap::startup()
 {
+	std::string ver_src = 
+		R"(
+			
+		)";
+	std::string frg_src =
+		R"(
+			
+		)";
+	std::string tcs_src =
+		R"(
+			
+		)";
+	std::string tes_src =
+		R"(
+			
+		)";
 
-	program = compile_program();
+	Error::set_shader_source(ver_src,frg_src,tcs_src,tes_src);
+	program = Error::compile_program();
+	glUseProgram(program);
 }
 void Dispmap::render(double time)
 {
