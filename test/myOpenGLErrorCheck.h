@@ -22,16 +22,16 @@ namespace Error
 	static std::string tcs_str;
 	static std::string tes_str;
 
-	GLuint vertex_shader;
-	GLuint fragment_shader;
-	GLuint tessellation_control_shader;
-	GLuint tessellation_evluation_shader;
-	GLuint program;
+	static GLuint vertex_shader;
+	static GLuint fragment_shader;
+	static GLuint tessellation_control_shader;
+	static GLuint tessellation_evluation_shader;
+	static GLuint program;
 
-	bool vs_isActive = false;
-	bool fs_isActive = false;
-	bool tcs_isActive = false;
-	bool tes_isActive = false;
+	static bool vs_isActive = false;
+	static bool fs_isActive = false;
+	static bool tcs_isActive = false;
+	static bool tes_isActive = false;
 
 	void set_shader_source(std::string ver_src, std::string frg_src);
 	void set_shader_source(std::string ver_src, std::string frg_src, std::string tcs_src, std::string tes_src);

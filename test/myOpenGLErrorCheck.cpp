@@ -49,7 +49,7 @@ namespace Error
 					{
 						tes_isActive = true;
 						tessellation_evluation_shader = glCreateShader(GL_TESS_EVALUATION_SHADER);
-						glShaderSource(tessellation_evluation_shader, 1, &tessellation_control_source, NULL);
+						glShaderSource(tessellation_evluation_shader, 1, &tessellation_evaluation_source, NULL);
 						glCompileShader(tessellation_evluation_shader);
 					}
 				}
@@ -136,7 +136,7 @@ namespace Error
 							glGetShaderiv(tessellation_evluation_shader, GL_INFO_LOG_LENGTH, &Log_length);
 							Log_info.resize(Log_length);
 							glGetShaderInfoLog(tessellation_evluation_shader, Log_length, NULL, Log_info.data());
-							std::cerr << RED << "tessellation Evluation Shader Compilation Error:\n" << RESET << Log_info.data() << std::endl;
+							std::cerr << RED << "Tessellation Evluation Shader Compilation Error:\n" << RESET << Log_info.data() << std::endl;
 						}
 					}
 				}
