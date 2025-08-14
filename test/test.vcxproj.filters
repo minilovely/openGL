@@ -42,10 +42,21 @@
     <ClCompile Include="myOpenGLErrorCheck.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="bezier.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myOpenGLErrorCheck.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="test.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
